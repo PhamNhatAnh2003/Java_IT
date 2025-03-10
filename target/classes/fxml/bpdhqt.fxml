@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.view.BPDHQTController">
+   <children>
+      <BorderPane prefHeight="416.0" prefWidth="600.0">
+         <left>
+            <VBox prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #f0000;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnHome" layoutX="43.0" layoutY="145.0" onAction="#btnbuttonpressed" prefHeight="30.0" prefWidth="101.0" text="Home">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label prefHeight="27.0" prefWidth="99.0" text="     Tùy chọn" textFill="#1d1d1d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="BP Bán Hàng">
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="Kho Hàng">
+                     <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="Site">
+                     <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="282.0" prefWidth="481.0" styleClass="background" stylesheets="@../../../../Users/Admin/Downloads/CssStyle/BGStyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="46.0" prefWidth="439.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="62.0" text="Tìm Kiếm" textFill="#08bf2a">
+                           <HBox.margin>
+                              <Insets bottom="20.0" top="12.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfFilter" prefHeight="27.0" prefWidth="80.0" promptText="#Search">
+                           <HBox.margin>
+                              <Insets right="200.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #808080;" text="Site sẵn có">
+                           <HBox.margin>
+                              <Insets left="-150.0" right="200.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button onAction="#btnorderpressed" prefHeight="30.0" prefWidth="80.0" text="YCDH">
+                           <HBox.margin>
+                              <Insets left="-170.0" right="100.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="viewOrdersButton" onAction="#viewOrders" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Xem Đơn">
+                           <HBox.margin>
+                              <Insets left="-80.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="20.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <Pane prefHeight="272.0" prefWidth="490.0">
+                     <children>
+                        <Button layoutX="374.0" layoutY="15.0" onAction="#updateProduct" text="Update" />
+                        <TableView fx:id="productTable" layoutX="-1.0" layoutY="1.0" prefHeight="243.0" prefWidth="300.0">
+                           <columns>
+                              <TableColumn fx:id="sidColumn" prefWidth="53.33334493637085" text="Site ID" />
+                              <TableColumn fx:id="quantityColumn" prefWidth="82.00000381469727" text="Quantity" />
+                              <TableColumn fx:id="unitColumn" prefWidth="68.66668701171875" text="Unit" />
+                              <TableColumn fx:id="midColumn" prefWidth="92.66664123535156" text="Merchandise ID" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="sidField" layoutX="307.0" layoutY="124.0" promptText="Site ID" />
+                        <TextField fx:id="midField" layoutX="307.0" layoutY="155.0" promptText="Merchandise ID" />
+                        <TextField fx:id="quantityField" layoutX="307.0" layoutY="192.0" promptText="Quantity" />
+                        <TextField fx:id="unitField" layoutX="307.0" layoutY="89.0" promptText="Unit" />
+                        <Button layoutX="310.0" layoutY="14.0" onAction="#addProduct" prefHeight="27.0" prefWidth="51.0" text="Add" />
+                        <Button layoutX="310.0" layoutY="49.0" onAction="#deleteProduct" text="Delete" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+      
+            <HBox prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <VBox prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="289.0" text="BỘ PHẬN ĐẶT HÀNG QUỐC TẾ" textFill="#10dff2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

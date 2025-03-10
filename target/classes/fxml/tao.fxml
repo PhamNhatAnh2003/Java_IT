@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.view.InvoiceController">
+   <children>
+      <Label alignment="CENTER" prefHeight="71.0" prefWidth="718.0" style="-fx-background-color: linear-gradient(to bottom, lightblue, lightgrey); -fx-font-weight: bold; -fx-text-fill: black;" text="HÓA ĐƠN XÁC NHẬN">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-1.0" layoutY="-22.0" prefHeight="606.0" prefWidth="1.0" style="-fx-border-color: odcfc6; -fx-border-width: 2px;" />
+      <AnchorPane layoutY="70.0" prefHeight="550.0" prefWidth="703.0" style="-fx-background-color: white;">
+         <children>
+            <Pane prefHeight="550.0" prefWidth="703.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="30.0" style="-fx-font-weight: bold;" text="Thông tin ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="68.0" text="-Tên Khách Hàng :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="89.0" text="- Ngày tạo hóa đơn: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="110.0" text="- Tổng tiền: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="131.0" text="- Trạng thái: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="status" layoutX="160.0" layoutY="131.0" style="-fx-font-weight: bold;" text="Accepted" textFill="#00FF00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="158.0" style="-fx-font-weight: bold;" text="Chi tiết hóa đơn">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="orderDetailTable" layoutX="49.0" layoutY="207.0" prefHeight="147.0" prefWidth="608.0">
+                     <columns>
+                        <TableColumn fx:id="merchandiseID" prefWidth="75.0" text="Mã MH" />
+                        <TableColumn fx:id="merchandiseName" prefWidth="163.99999237060547" text="Tên MH" />
+                        <TableColumn fx:id="quantity" prefWidth="89.33331298828125" text="Số lượng" />
+                        <TableColumn fx:id="unit" prefWidth="120.79998779296875" text="Đơn vị" />
+                        <TableColumn fx:id="delivery" prefWidth="160.79998779296875" text="Vận chuyển" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="306.0" layoutY="431.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="91.0" text="Trang Chủ" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

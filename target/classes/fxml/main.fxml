@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.view.MainMenuController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="115.0" style="-fx-background-color: #f0000;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="BP Bán Hàng">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="DHbutton" onAction="#btnbuttonpressed" prefHeight="35.0" prefWidth="115.0" text="BP Đăt Hàng">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="Quản Lý Site" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="BPQL Kho">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="HTQL Kho">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: C:\Java workspace\ITSS\src\Main\resources\Trangchu.png;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="232.0" fitWidth="276.0" layoutX="115.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Trangchu.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </center>
+   <top>
+      <Label prefHeight="59.0" prefWidth="607.0" style="-fx-background-color: #12c3ef;" text="Hệ Thống Đặt Hàng Xuất Khẩu" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Roboto Bold" size="18.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <Label prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: #12c3ef;" textFill="#00d0ff" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
